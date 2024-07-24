@@ -1,13 +1,20 @@
 import { getJournals } from "@/api/journals";
 import { JournalCard } from "@/components/journalCard/JournalCard";
+import { Stack } from "@mantine/core";
 
 export default async function page() {
   const data = await getJournals();
   return (
-    <div>
+    <Stack>
       {data?.map((item) => {
-        return <JournalCard title={item.title} body={item.body} />;
+        return (
+          <JournalCard
+            key={`journal-${item.id}`}
+            title={item.title}
+            body={item.body}
+          />
+        );
       })}
-    </div>
+    </Stack>
   );
 }

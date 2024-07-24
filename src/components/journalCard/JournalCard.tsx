@@ -1,5 +1,5 @@
 import { Paper, Text, ThemeIcon, rem } from "@mantine/core";
-import { IconColorSwatch } from "@tabler/icons-react";
+import { IconColorSwatch, IconBackground } from "@tabler/icons-react";
 import classes from "./JournalCard.module.css";
 
 type JournalCardProps = {
@@ -16,7 +16,7 @@ export function JournalCard({ title, body }: JournalCardProps) {
         variant="gradient"
         gradient={{ deg: 0, from: "pink", to: "orange" }}
       >
-        <IconColorSwatch
+        <IconBackground
           style={{ width: rem(28), height: rem(28) }}
           stroke={1.5}
         />
