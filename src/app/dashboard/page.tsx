@@ -1,11 +1,3 @@
-import React from 'react'
-
-type Props = {
-    children: React.ReactNode
-}
-
-export default function page({children}: Props) {
-  return (
-    <div>page</div>
-  )
+export default function page() {
+  return <div>Dashboard</div>;
 }
