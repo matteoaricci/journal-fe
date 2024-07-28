@@ -7,6 +7,7 @@ import {
 } from "@mantine/core";
 import { IconHome, IconNotebook } from "@tabler/icons-react";
 import Link from "next/link";
+import classes from "./Shell.module.css";
 
 type Props = { children: React.ReactNode };
 
@@ -28,7 +29,7 @@ export default function Shell({ children }: Props) {
       <AppShellNavbar>
         {navData.map((d) => {
           return (
-            <Link href={d.href}>
+            <Link className={classes["nav-link"]} href={d.href}>
               <Flex mx="md" my="sm" align="center" gap="md">
                 <d.icon />
                 {d.desc}
